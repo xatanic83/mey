@@ -1,0 +1,122 @@
+[
+  {
+    "name": "zed-1",
+    "host": "https://5050-firebase-meji-1778423729022.cluster-73qgvk7hjjadkrjeyexca5ivva.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-2",
+    "host": "https://5050-firebase-meji-1778442460110.cluster-isls3qj2gbd5qs4jkjqvhahfv6.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-3",
+    "host": "https://5050-firebase-meji-1778446054125.cluster-y3k7ko3fang56qzieg3trwgyfg.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-4",
+    "host": "https://5050-firebase-meji-1778446060190.cluster-fkltigo73ncaixtmokrzxhwsfc.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-5",
+    "host": "https://5050-firebase-meji-1778446064272.cluster-d5vecjrg5rhlkrz6nm4jty7avc.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-6",
+    "host": "https://5050-firebase-meji-1778446068302.cluster-bg6uurscprhn6qxr6xwtrhvkf6.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-7",
+    "host": "https://5050-firebase-meji-1778446072348.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-8",
+    "host": "https://5050-firebase-meji-1778446077403.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-9",
+    "host": "https://5050-firebase-meji-1778446323426.cluster-fdkw7vjj7bgguspe3fbbc25tra.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-10",
+    "host": "https://5050-firebase-meji-1778446328317.cluster-qxqlf3vb3nbf2r42l5qfoebdry.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-11",
+    "host": "https://5050-firebase-meji-1778447983144.cluster-yylgzpipxrar4v4a72liastuqy.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-12",
+    "host": "https://5050-firebase-meji-1778447990941.cluster-nle52mxuvfhlkrzyrq6g2cwb52.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-13",
+    "host": "https://5050-firebase-meji-1778447967019.cluster-44kx2eiocbhe2tyk3zoyo3ryuo.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-14",
+    "host": "https://5050-firebase-meji-1778447973061.cluster-a6zx3cwnb5hnuwbgyxmofxpkfe.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-15",
+    "host": "https://5050-firebase-meji-1778447977108.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-16",
+    "host": "https://5050-firebase-meji-1778447987172.cluster-iktsryn7xnhpexlu6255bftka4.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-17",
+    "host": "https://5050-firebase-meji-1778448084936.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-18",
+    "host": "https://5050-firebase-meji-1778448337993.cluster-y75up3teuvc62qmnwys4deqv6y.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-19",
+    "host": "https://5050-firebase-meji-1778448401892.cluster-isls3qj2gbd5qs4jkjqvhahfv6.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-20",
+    "host": "https://5050-firebase-meji-1778448535287.cluster-cz5nqyh5nreq6ua6gaqd7okl7o.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-21",
+    "host": "https://5050-firebase-meji-1778449316355.cluster-ys234awlzbhwoxmkkse6qo3fz6.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-22",
+    "host": "https://5050-firebase-meji-1778449332667.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-23",
+    "host": "https://5050-firebase-meji-1778449336707.cluster-mwsteha33jfdowtvzffztbjcj6.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-24",
+    "host": "https://5050-firebase-meji-1778449438305.cluster-va5f6x3wzzh4stde63ddr3qgge.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-25",
+    "host": "https://5050-firebase-meji-1778449666264.cluster-aic6jbiihrhmyrqafasatvzbwe.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-26",
+    "host": "https://5050-firebase-meji-1778449328653.cluster-d5vecjrg5rhlkrz6nm4jty7avc.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-27",
+    "host": "https://5050-firebase-meji-1778449766259.cluster-sumfw3zmzzhzkx4mpvz3ogth4y.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-28",
+    "host": "https://5050-firebase-meji-1778449339728.cluster-euie3bjlbvhliv5fpqv5ofgi46.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-29",
+    "host": "https://5050-firebase-meji-1778449935993.cluster-isls3qj2gbd5qs4jkjqvhahfv6.cloudworkstations.dev"
+  },
+  {
+    "name": "zed-30",
+    "host": "https://5050-firebase-meji-1778449323596.cluster-d5vecjrg5rhlkrz6nm4jty7avc.cloudworkstations.dev"
+  }
+]

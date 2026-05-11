@@ -1,0 +1,25 @@
+{
+  "name": "Meji Backend",
+  "version": "2.0.0",
+  "description": "Meji's API Manager: Precision over Power, Silence over Noise.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "@tanpoint",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.13.6",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "input": "^1.0.1",
+    "ssh2": "^1.15.0",
+    "telegram": "^2.26.22",
+    "ws": "^8.19.0"
+  }
+}

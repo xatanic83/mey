@@ -1,0 +1,39 @@
+{
+    "Layer 7": {
+        "hfree": {
+            "command": "go run hlegit.go {host} {time} {ratelimit} {slot}",
+            "userbot": true,
+            "external": true,
+            "bots": true,
+            "l7srv": true
+        },
+        "hget": {
+            "command": "go run hget.go {host} {time} {ratelimit} {slot} {browser} {os} {referer} {httpmethod} {protocol}",
+            "userbot": false,
+            "external": true,
+            "bots": true,
+            "l7srv": true
+        },
+        "hrax": {
+            "command": "go run hrax.go {host} {time} {ratelimit} {slot} {browser} {os} {referer} {httpmethod} {protocol}",
+            "userbot": false,
+            "external": true,
+            "bots": true,
+            "l7srv": true
+        },
+        "hlegit": {
+            "command": "go run hlegit.go {host} {time} {ratelimit} {slot}",
+            "userbot": false,
+            "external": true,
+            "bots": true,
+            "l7srv": true
+        },
+        "hbrow": {
+            "command": "node hbrow {host} {time} 30 1 2",
+            "userbot": false,
+            "external": false,
+            "bots": true,
+            "l7srv": false
+        }
+    }
+}

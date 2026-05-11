@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Duplicate Ctrl+D",
+  "version": "1.0",
+  "description": "Duplicates current tab when Ctrl+D is pressed.",
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

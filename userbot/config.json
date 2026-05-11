@@ -1,0 +1,33 @@
+{
+    "groups": [
+        {
+            "id": "-1003575787657",
+            "enabled": false,
+            "maxTime": 120,
+            "description": "Main attack group",
+            "commandTemplate": "/attack {target} {groupMethod}",
+            "methodMap": {
+                "hfree": "GATLING",
+                "hget": "RAILGUN",
+                "hrax": "GATLING",
+                "hlegit": "GATLING"
+            }
+        },
+        {
+            "username": "sillycatpublic",
+            "enabled": false,
+            "maxTime": 120,
+            "description": "Sillycat Public",
+            "commandTemplate": "/attack {target} 443 {time}",
+            "methodMap": {}
+        },
+        {
+            "username": "vaxstressccupdates/1",
+            "enabled": true,
+            "maxTime": 120,
+            "description": "VaxStresserUpdates",
+            "commandTemplate": "/attack {target} 443 {time}",
+            "methodMap": {}
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "asulama": {
+        "max_time": 86400,
+        "cooldown": 0,
+        "concurrent": 500,
+        "expiry_days": 3650
+    }
+}
